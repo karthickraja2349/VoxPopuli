@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polling Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Polling System</h1>
+    <div class="container">
+        <form action="AcknowledgeForm.jsp" method="post">
+            <label for="voter_name">Name*:</label>
+            <input type="text" id="voter_name" name="voter_name" required>
+
+            <label for="voter_id">Voter ID* (First 3 letters + 7 digits):</label>
+            <input type="text" id="voter_id" name="voter_id" pattern="[A-Za-z]{3}[0-9]{7}" required title="Format: ABC1234567">
+
+            <label for="electoral_area_id">Electoral Area ID*:</label>
+            <select id="electoral_area_id" name="electoral_area_id" required>
+                <option value="">Select an area*</option>
+                <option value="219">219</option>
+                <option value="221">221</option>
+                <option value="222">222</option>
+                <option value="223">223</option>
+                <option value="251">251</option>
+            </select>
+
+            <label for="candidate_id">Candidate*:</label>
+            <select id="candidate_id" name="candidate_id" required>
+                <option value="">Select a candidate</option>
+                <option value="0">NOTA</option>
+                <option value="18031">Kumar (Area 219)</option>
+                <option value="26621">Selva (Area 219)</option>
+                <option value="45109">Arun (Area 219)</option>
+                <option value="73530">Raj (Area 219)</option>
+                <option value="77478">Naren (Area 219)</option>
+                <option value="21298">Gopal (Area 221)</option>
+                <option value="28716">Vikram (Area 221)</option>
+                <option value="64007">Suresh (Area 221)</option>
+                <option value="90316">Ravi (Area 221)</option>
+                <option value="92760">Manikandan (Area 221)</option>
+                <option value="16557">Senthil (Area 222)</option>
+                <option value="28489">Bala (Area 222)</option>
+                <option value="32279">Prabhu (Area 222)</option>
+                <option value="61789">Raja (Area 222)</option>
+                <option value="98604">Dinesh (Area 222)</option>
+                <option value="10739">Ashok (Area 223)</option>
+                <option value="45882">Ganesh (Area 223)</option>
+                <option value="51881">Vijay (Area 223)</option>
+                <option value="79095">Kumaravel (Area 223)</option>
+                <option value="86908">Karthik (Area 223)</option>
+                <option value="15222">Vasudevan (Area 251)</option>
+                <option value="20106">Muthu (Area 251)</option>
+                <option value="64249">Saravanan (Area 251)</option>
+                <option value="65010">Raja (Area 251)</option>
+                <option value="69903">Hari (Area 251)</option>
+            </select>
+
+            <label for="reason">Reason*:</label>
+            <input type="text" id="reason" name="reason" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
+
